@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Reload</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        .user, .assist {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 20px;
+            color: white;         
+            font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+            }
+            
+            .assist {
+            background-color: rgba(10, 198, 255, 0.55);           
+            }
+            
+            .user {
+                background-color: rgba(0, 0, 0, 0.7); 
+            }
+            
+            
+    </style>
+</head>
+<body>
+    <script>
+        setInterval(() => {
+            window.location.reload();
+        }, 3000);
+    </script>
+    
+        {% for item in history %}
+                <div class="{{ item.div }}"><h1 style="background-color: black; border-radius: 20px; padding: 10px; margin: 5px;">{{ item.name }}</h1> 
+                <p style="background-color: white; border-radius: 10px; padding: 5px; margin: 10px; color: black;"> {{ item.content }}</p></div>
+        {% endfor %}
+</body>
+</html>

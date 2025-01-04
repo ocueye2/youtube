@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Reload</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        body {
+            font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+        }
+        .title {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .artist {
+            background-color: rgb(132, 199, 211);
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 20px;
+
+        }
+    </style>
+    <script>
+        setInterval(() => {
+            window.location.reload();
+        }, 3000);
+    </script>
+    
+    <h1 class="title"> {{ music }} </h1>
+    <h2 class="artist"> by {{ artist }} </h2>
+    
+        
+</body>
+</html>
