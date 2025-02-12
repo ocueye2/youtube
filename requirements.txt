@@ -1,0 +1,10 @@
+# this is not the full list
+flask
+tourch
+googleapi
+pygame
+ollama
+mutagen
+flask_socketio
+transformers
+accelerate

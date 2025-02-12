@@ -1,7 +1,6 @@
 from diffusers import StableDiffusionPipeline, DDPMScheduler
 import torch
-try:
-    # Load the Stable Diffusion pipeline
+if True:    # Load the Stable Diffusion pipeline
     pipe = StableDiffusionPipeline.from_pretrained(
         "CompVis/stable-diffusion-v1-4",
         revision="fp16",
@@ -11,8 +10,6 @@ try:
 
     # Replace the scheduler
     pipe.scheduler = DDPMScheduler(beta_start=0.00085, beta_end=0.012, beta_schedule="scaled_linear")
-except:
-    print("Error loading the model")
     
 def makeimage(prompt):
     try:
@@ -20,3 +17,6 @@ def makeimage(prompt):
         image.save("image.png")
     except:
         print("Error generating image")
+
+if __name__ == "__main__":
+    makeimage("A house")
